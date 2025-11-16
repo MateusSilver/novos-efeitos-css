@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <script>
+      (function () {
+        const saved = localStorage.getItem("theme");
+        if (saved) {
+          document.documentElement.setAttribute("data-theme", saved);
+        }
+      })();
+    </script>
     <meta charset="UTF-8" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,6 +23,7 @@
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/components.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="scripts/theme.js" defer></script>
     <title>Efeitos CSS</title>
   </head>
   <body>
@@ -25,7 +34,9 @@
       accusamus corporis. Et odit fugiat pariatur sit debitis autem quia.
     </p>
     <h2>Novas animações</h2>
-    <button class="btn btn-primary">Trocar de tema</button>
+    <button class="btn btn-primary" id="theme-toggle" aria-label="mudar tema">
+      Trocar de tema
+    </button>
     <button class="btn btn-secondary">Clique já</button>
     <button class="btn btn-terciary">terciario</button>
   </body>
