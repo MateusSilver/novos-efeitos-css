@@ -6,6 +6,7 @@
   padding: 0.75em 1.5em;
   border-radius: var(--radius-lg, 0px);
   border: 2px solid transparent;
+  outline-offset: -2px;
   transition: 0.25s ease-in-out;
   display: inline-flex;
   align-items: center;
@@ -15,27 +16,33 @@
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
-  color: var(--color-bg);
+  --_bg: var(--color-primary);
+  background: var(--_bg);
+  color: color-contrast(var(--_bg) vs var(--color-bg), var(--color-text) to AA);
 }
 
 .btn-primary:hover {
-  background-color: color-mix(in oklch, var(--color-primary) 88%, black 12%);
+  background-color: color-mix(in oklch, var(--_bg) 88%, white 12%);
 }
 
 .btn-secondary {
-  background-color: var(--color-secondary);
-  color: var(--color-bg);
+  --_bg: var(--color-secondary);
+  background: var(--_bg);
+  color: color-contrast(var(--_bg) vs var(--color-bg), var(--color-text) to AA);
 }
 
 .btn-secondary:hover {
   background: transparent;
-  color: var(--color-secondary);
+  color: color-contrast(
+    var(--color-secondary) vs var(--color-bg),
+    black,
+    white to AA
+  );
   border-color: var(--color-secondary);
 }
 
 [data-theme="dark"] .btn-primary:hover {
-  background: color-mix(in oklch, var(--color-primary) 85%, black 15%);
+  background: color-mix(in oklch, var(--color-primary) 85%, white 15%);
 }
 
 .btn-terciary {
@@ -44,5 +51,9 @@
 }
 
 .btn-terciary:hover {
-  color: var(--color-primary);
+  color: color-contrast(
+    var(--color-primary) vs var(--color-bg),
+    black,
+    white to AA
+  );
 }

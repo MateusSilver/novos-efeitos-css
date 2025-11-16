@@ -50,3 +50,21 @@ project/
    ├─ components.css    ← Botões, cards, inputs…
    └─ theme.css         ← Light / Dark Modes
 ```
+
+## criação de script de troca de temas
+
+Apos organizar cores oklch de botões e fundos, criamos os scripts de troca de tema, salvando variavel de navevegador para cada tema, o escuro e o claro.
+
+## Acessibilidade com o color-contrast
+
+Nova feature para criar cores ponderadas baseadas no contraste com o fundo. Isso é definido automaticamente e pode inclusive se misturar com color-mix para cores de alto nivel com oklch, tendo certeza de hovers e acessibilidade de botões.
+
+```css
+color: color-contrast(var(--btn-bg) vs white, black);
+```
+
+esse script faz com que comparemos a cor do fundo e adicionemos ao texto a cor branca se o contraste for melhor com o fundo ou cor preta se não. temos ainda o nivel de acessibilidade que vamos utilizar, por exemplo:
+
+- to AA se contraste for 4.5:1 que é o minimo
+- to AAA se o contraste for 7:1 o maximo de acessibilidade
+- to x com x = numero escolhido para um contraste personalizado: por exemplo to wcga1.2 4.5
