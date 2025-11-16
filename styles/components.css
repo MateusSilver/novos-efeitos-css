@@ -38,10 +38,6 @@
   background: color-mix(in oklch, var(--color-primary) 85%, black 15%);
 }
 
-[data-theme="dark"] .btn-secondary:hover {
-  background: color-mix(in oklch, var(--color-primary) 85%, black 15%);
-}
-
 .btn-terciary {
   background: transparent;
   color: var(--color-text);
