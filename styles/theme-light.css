@@ -1,0 +1,6 @@
+:root {
+  --color-bg: oklch(96% 0.02 12.72);
+  --color-text: oklch(26% 0.01 257.42);
+  --color-primary: oklch(64% 0.15 241.74);
+  --color-secondary: oklch(81% 0.17 114.24);
+}

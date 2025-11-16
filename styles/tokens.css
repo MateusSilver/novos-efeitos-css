@@ -1,0 +1,10 @@
+:root {
+  --font-family-base: "Raleway", sans-serif;
+  --radius-lg: 0px;
+  --space-md: 1rem;
+
+  --color-bg: initial;
+  --color-text: initial;
+  --color-primary: initial;
+  --color-secondary: initial;
+}
