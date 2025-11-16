@@ -68,3 +68,7 @@ esse script faz com que comparemos a cor do fundo e adicionemos ao texto a cor b
 - to AA se contraste for 4.5:1 que é o minimo
 - to AAA se o contraste for 7:1 o maximo de acessibilidade
 - to x com x = numero escolhido para um contraste personalizado: por exemplo to wcga1.2 4.5
+
+## cards de vidro
+
+utilizando o `backdrop-filter` podemos criar um efeito de blur e background semitgransparente para um efeito de vidro usando apenas css. E com a ajuda de `text-elipsis` podemos melhorar isso ainda mais.

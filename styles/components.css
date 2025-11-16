@@ -15,10 +15,15 @@
   font-weight: 600;
 }
 
+.btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
 .btn-primary {
   --_bg: var(--color-primary);
   background: var(--_bg);
-  color: color-contrast(var(--_bg) vs var(--color-bg), var(--color-text) to AA);
+  color: color-contrast(var(--_bg) vs var(--color-bg), black, white to AA);
 }
 
 .btn-primary:hover {
@@ -28,7 +33,7 @@
 .btn-secondary {
   --_bg: var(--color-secondary);
   background: var(--_bg);
-  color: color-contrast(var(--_bg) vs var(--color-bg), var(--color-text) to AA);
+  color: color-contrast(var(--_bg) vs var(--color-bg), black, white to AA);
 }
 
 .btn-secondary:hover {
@@ -42,7 +47,7 @@
 }
 
 [data-theme="dark"] .btn-primary:hover {
-  background: color-mix(in oklch, var(--color-primary) 85%, white 15%);
+  background: color-mix(in oklch, var(--_bg) 85%, black 15%);
 }
 
 .btn-terciary {
@@ -72,4 +77,51 @@
 
 .btn-terciary:hover::after {
   width: 100%;
+}
+
+/*  ========CARTÕES======= */
+.container {
+  margin: 2em auto;
+  min-height: 80vh;
+  background-image: url(../media/soul-eater-wallpaper.jpg);
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.vrido {
+  cursor: pointer;
+  background: color-mix(in oklch, var(--color-bg) 40%, transparent 60%);
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in oklch, white 30%, transparent 70%);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.08);
+  transition: 300ms ease-in-out;
+}
+
+.vrido:hover {
+  backdrop-filter: blur(22px) saturate(180%);
+  box-shadow: 0 10px 24px rgb(0 0 0 / 0.12);
+}
+
+.card {
+  padding: 1.5em;
+  max-width: 400px;
+  max-height: 300px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.text-elipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
